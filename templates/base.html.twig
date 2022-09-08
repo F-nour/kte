@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Kiff ton écharpe - {% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('style') }}
+        {% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            {% include '_nav.html.twig' %}
+        </header>
+        <div class="container" id="container">
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+            <footer>
+                {% include '_footer.html.twig' %}
+            </footer>
+        </div>
+    </body>
+</html>

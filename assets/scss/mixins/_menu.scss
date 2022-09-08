@@ -1,0 +1,62 @@
+// menu
+
+@mixin headerFooter() {
+  position: fixed;
+  left: 0;
+  height: var(--sizeMenu);
+  justify-content: center;
+  @media (max-width: 1024px) {
+    font-size: small;
+  }
+}
+
+@mixin menu-onclick() {
+  background-repeat: no-repeat;
+  background-size: var(--sizeMenu);
+  cursor: pointer;
+  height: var(--sizeMenu);
+  background-color: initial;
+  border: none;
+}
+
+@mixin menuBody() {
+  background-color: var(--closeColor);
+  box-shadow: var(--boxShadow);
+  &:hover,
+  &:focus {
+    .open {
+      transition: var(--transitionAll);
+      background-image: url('../../images/components/expand_more_hover.svg');
+      @include menu();
+    }
+
+    .close {
+      transition: var(--transitionAll);
+      background-image: url('../../images/components/expand_less_hover.svg');
+      @include menu();
+    }
+  }
+}
+
+@mixin menu() {
+  @include menu-onclick();
+  width: var(--sizeMenu);
+  background-attachment: local;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 25;
+  background-color: initial;
+}
+
+@mixin closed() {
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.3s;
+}
+
+@mixin styleMenu {
+  background-color: var(--menuColor);
+  box-shadow: var(--boxShadow);
+}

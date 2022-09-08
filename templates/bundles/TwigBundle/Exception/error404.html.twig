@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page introuvable ou en cours de construction {% endblock %}
+
+{% block main %}
+    {{ component('title', {
+        classname: 'error',
+        id: 'error',
+        content: block('title')
+    })
+    }}
+    {{ component('error', {
+        content: "Cette page est introuvable."
+    }) }}
+{% endblock %}

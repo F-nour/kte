@@ -1,0 +1,126 @@
+@use '../mixins/flex';
+@use '../mixins/form';
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--linkColor) var(--scrollColor);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+
+    &-track {
+      background-color: var(--scrollColor);
+    }
+
+    &-thumb {
+      background-color: var(--linkColor);
+      border-radius: 20px;
+      border: 1px solid var(--borderColor);
+    }
+
+    &-corner {
+      background-color: var(--bgColor);
+    }
+  }
+}
+
+body {
+  flex: 1 0;
+  height: var(--sizeAll);
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  box-shadow: var(--boxShadow);
+  letter-spacing: 0.05rem;
+  @media (max-width: 1024px) {
+    font-size: large;
+  }
+  font-family: var(--joan), var(--font-family-base);
+}
+
+.container {
+  margin-top: var(--sizeMenu);
+  @include flex.flex-column(space-between, center, 0);
+  width: var(--sizeAll);
+  height: var(--sizeAll);
+}
+
+p {
+  margin-bottom: var(--sizeHalf);
+}
+
+.internal,
+.internal a,
+.internal button {
+  color: var(--linkColor);
+}
+
+.external,
+.external a,
+.external button {
+  color: var(--linkExternal);
+}
+
+a {
+  text-decoration: none;
+  // color: var(--linkColor);
+  padding: 0 0.5rem;
+  background: none;
+  border: none;
+  justify-content: center;
+  font-style: italic;
+  font-family: var(--abril), var(--font-family-base);
+}
+
+.button,
+.btn {
+  font-weight: 700;
+  font-family: var(--gentium), var(--font-family-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-weight: 700;
+  font-style: normal;
+  font-family: var(--gentium), var(--font-family-base);
+  margin: 1em 0 1em;
+}
+
+h1,
+.h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: var(--abril), var(--font-family-base);
+  margin-bottom: 1.5em;
+}
+
+h2,
+.h2 {
+  font-size: 2.8rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.6rem;
+}
+
+h4,
+.h4 {
+  font-size: 2.4rem;
+}
+
+h5,
+.h5 {
+  font-size: 2.2rem;
+}
+
+.no-flex {
+  display: initial;
+}

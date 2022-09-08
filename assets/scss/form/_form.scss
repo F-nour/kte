@@ -1,0 +1,63 @@
+@use '../mixins/flex';
+@use '../mixins/form';
+
+
+.form {
+  padding: 6px 12px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.42857143;
+
+  &-group {
+    margin: 1.5rem 0;
+    gap: var(--sizeGap) px;
+  }
+}
+
+.legend {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  @include form.font();
+}
+
+.group-end,
+.group-row,
+.form__replace-delete {
+  @include flex.flex-row(0, 8, center, wrap);
+}
+
+.form-control {
+  width: 100%;
+  border-bottom: 1px solid var(--textColor);
+  border-radius: 4px;
+  padding: 0.6rem 0 0.6rem 2em;
+  line-height: 1.42857143;
+  color: var(--textColor);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in;
+  min-width: 20%;
+  @include form.font();
+  @media (min-width: 1024px) {
+    width: var(--sizeAll);
+  }
+}
+
+input::placeholder {
+  color: var(--borderColor);
+}
+
+
+.input-content {
+  @include form.icons();
+
+  &:after,
+  &:before {
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    min-height: 0;
+    top: 1.8rem;
+    padding-left: 0.5rem;
+  }
+}

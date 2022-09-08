@@ -1,0 +1,13 @@
+@use '../mixins/element';
+@use '../mixins/flex';
+
+.home {
+  @include element.container();
+}
+
+.actuality {
+  @include flex.flex-row(0, 8, space-between);
+&-content {
+  max-width: var(--sizeAll);
+}
+}

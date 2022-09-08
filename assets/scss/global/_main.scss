@@ -1,0 +1,17 @@
+@use '../mixins/element';
+
+.main {
+  width: var(--sizeAll);
+  @include element.main();
+  padding-bottom: calc(var(--sizeMenu) + var(--sizeDubble));
+
+
+  & > section {
+    width: var(--sizeAll);
+    @include element.container();
+    @media (max-width: 1024px) {
+      width: 98%;
+      margin: auto;
+    }
+  }
+}

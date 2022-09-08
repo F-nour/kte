@@ -1,0 +1,20 @@
+@use '../mixins/collapse';
+
+.openElements {
+  position: initial;
+  z-index: initial;
+  visibility: initial;
+}
+
+.collapse {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  transition: all 0.3s;
+}
+
+.dl-Picture.collapse {
+  position: inherit;
+}
+

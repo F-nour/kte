@@ -1,0 +1,10 @@
+<p class="error"></p>
+
+<p class="h2">{{ content }}</p>
+
+<p class="h3">Nous sommes le {{ "now"|date('d/m/Y') }} à {{ "now"|date('h:i:s') }}.</p>
+
+<p class="h4">Merci de faire une capture d'écran de cette page pour nous aider à résoudre le problème.</p>
+
+<p class="h4 center text-dangers">Vous serez redirigé dans <span id="redirection"></span> ! </p>
+<meta http-equiv='Refresh' content="15;URL={{ path('homepage') }}">

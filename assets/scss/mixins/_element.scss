@@ -1,0 +1,36 @@
+// HTML element mixins
+
+
+@mixin main() {
+  gap: var(--sizeDubble);
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    width: var(--sizeAll);
+    padding-bottom: var(--sizeDubble);
+  }
+}
+
+@mixin container() {
+  & .section-content {
+    width: 90%;
+    margin: 0 auto;
+    gap: var(--sizeGeneral);
+    @media screen and (max-width: 1024px) {
+      width: var(--sizeAll);
+    }
+
+    & > div {
+      gap: var(--sizeGeneral);
+    }
+  }
+  &_banner {
+    width: var(--sizeAll);
+    height: var(--sizeBanner);
+    background: var(--bgColor);
+    box-shadow: var(--boxShadow);
+    @media screen and (max-width: 1024px) {
+      width: var(--sizeAll);
+      height: var(--sizeAll);
+    }
+  }
+}

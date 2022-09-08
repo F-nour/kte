@@ -1,0 +1,41 @@
+// variables css
+@use 'scss/variables/boxShadow';
+@use 'scss/variables/color';
+@use 'scss/variables/font';
+@use 'scss/variables/other';
+@use 'scss/variables/print';
+@use 'scss/variables/size';
+@use 'scss/variables/transition';
+
+// reseters for the site
+@use "scss/reseters/common";
+
+// framworks
+@use 'scss/global/bootstrap';
+
+// global
+@use 'scss/global/custom';
+@use 'scss/global/main';
+
+
+// Forms
+@use 'scss/form/button';
+@use 'scss/form/form';
+@use 'scss/form/alert';
+
+// views
+@use 'scss/views/home';
+@use 'scss/views/about';
+@use 'scss/views/legal';
+
+// partials
+@use 'scss/components/modal';
+@use 'scss/components/menu';
+@use 'scss/components/header';
+@use 'scss/components/footer';
+@use 'scss/components/icons';
+@use 'scss/components/collapse';
+
+// accessibility
+@use 'scss/global/text';
+@use 'scss/global/accessibility';

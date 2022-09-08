@@ -1,0 +1,44 @@
+@use '../mixins/accessibility';
+
+.sr-only,
+.sr-only-focus:not(:focus):not(:focus-within) {
+  // bostrap < v5
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important; // Fix for https://github.com/twbs/bootstrap/issues/25686
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea,
+*[tabindex] {
+  @include accessibility.focus();
+  @include accessibility.hover();
+  @include accessibility.active();
+  @media (max-width: 1024px) {
+    @include accessibility.disabledBoxShadow();
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}

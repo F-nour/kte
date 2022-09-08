@@ -1,0 +1,77 @@
+@use '../mixins/flex';
+@use '../mixins/form';
+
+.btn {
+  @include flex.flex-row(0, 8, center, wrap);
+  color: var(--linkColor);
+  padding: 6px 12px;
+  margin-bottom: 0;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: all 0.2s ease-in-out;
+  font-size: var(--menuFontSize);
+  min-width: 10rem;
+  max-width: fit-content;
+  @include form.icons();
+  @media (max-width: 1024px) {
+    min-width: var(--sizeAll);
+    font-size: small;
+  }
+}
+
+.btn-no-style {
+  padding: inherit;
+  margin: inherit;
+  line-height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  border: inherit;
+  border-radius: inherit;
+  box-shadow: initial;
+  background: inherit;
+}
+
+.btn-delete,
+.btn-add,
+.btn-update {
+  border-radius: 4rem;
+}
+
+.btn-success,
+.btn-add {
+  background-color: var(--successBg);
+  border-color: var(--successColor);
+}
+
+.btn-cancel,
+.btn-delete {
+  background-color: var(--errorBg);
+  border-color: var(--errorColor);
+}
+
+.btn-reset,
+.btn-update {
+  background-color: var(--warningBg);
+  border-color: var(--warningColor);
+}
+
+.btn-upload,
+.btn-dl {
+  background-color: var(--updateBg);
+  border-color: var(--updateColor);
+}
+
+.btn-sr {
+  min-width: 0;
+  max-width: 4rem;
+  border-radius: 50%;
+}

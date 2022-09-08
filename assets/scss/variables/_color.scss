@@ -1,0 +1,26 @@
+:root {
+  --textColor: rgb(44, 31, 71);
+  --linkColor: rgb(88, 61, 143);
+  --linkExternal: rgb(75, 20, 184);
+  --focusColor: rgb(85, 0, 255);
+  --borderColor: rgba(44, 43, 59, 0.6);
+  --scrollColor: rgb(169, 167, 190);
+  --bgColor: rgb(226, 226, 233);
+  --transparentColor: rgba(6, 0, 77, 0.6);
+  --activeColor: rgba(168, 148, 209, 0.6);
+  --menuColor: rgb(198, 196, 212);
+  --actualColor: rgba(89, 87, 117, 0.3);
+  --actualFocusColor: rgba(150, 144, 213, 0.3);
+  --successBg: rgba(0, 200, 0, 0.2);
+  --alertSuccess: rgba(100, 255, 100, 0.1);
+  --successColor: rgb(0, 200, 0);
+  --successText: rgb(0, 50, 0);
+  --warningBg: rgba(255, 150, 0, 0.2);
+  --warningColor: rgb(255, 150, 0);
+  --errorBg: rgba(255, 0, 0, 0.2);
+  --alertError: rgba(255, 100, 100, 0.1);
+  --errorColor: rgb(200, 0, 0);
+  --infoColor: rgb(100, 0, 0);
+  --updateBg: rgba(0, 140, 255, 0.1);
+  --updateColor: rgb(0, 140, 255);
+}

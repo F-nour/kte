@@ -1,0 +1,10 @@
+@use '../mixins/element';
+@use '../mixins/flex';
+
+.about {
+  @include element.container();
+}
+
+.about-header {
+  @include flex.flex-row(0, 8, space-between);
+}

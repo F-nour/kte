@@ -1,0 +1,88 @@
+@use '../mixins/form';
+@use '../mixins/flex';
+
+.is-invalid {
+  border-color: var(--errorColor);
+  -webkit-box-shadow: 0 0 2px var(--errorColor);
+  box-shadow: 0 0 2px var(--errorColor);
+  color: var(--errorColor);
+}
+
+.alert {
+  margin-top: 2rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  &-error {
+    background-color: var(--alertError);
+    margin-top: 0;
+  }
+
+  &-errors {
+    background-color: var(--alertError);
+  }
+
+  &-success {
+    background-color: var(--alertSuccess);
+  }
+
+  &-errors,
+  &-success {
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.text-danger,
+.text-dangers,
+.text-success,
+.form-info {
+  @include form.icons();
+  @include form.font();
+  @include flex.flex-row(0, 8, center, nowrap);
+}
+
+.text-danger {
+  color: var(--errorColor);
+  font-weight: 600;
+}
+
+.text-danger:before,
+.text-dangers:before {
+  content: 'warning_amber';
+}
+
+.text-dangers,
+.text-success {
+  @include flex.flex-row(0, 8, center, nowrap);
+  font-weight: 700;
+}
+
+.text-success {
+  color: var(--successText);
+
+  &:before {
+    content: 'verified';
+  }
+}
+
+.text-dangers,
+.form-info {
+  color: var(--infoColor);
+}
+
+.form-info p {
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+.form-info:before {
+  content: 'info';
+  margin-bottom: 0.6rem;
+}
+
+

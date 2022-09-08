@@ -1,0 +1,15 @@
+:root {
+  @media print {
+    --textColor: black;
+    --linkColor: black;
+    --focusColor: none;
+    --borderColor: black;
+    --scrollColor: none;
+    --bgColor: white;
+    --transparentColor: rgba(0, 0, 0, 0.5);
+    --closeColor: rgb(159, 159, 159);
+    --openColor: rgb(210, 210, 210);
+    --boxShadow: none;
+    --modalShadow: none;
+  }
+}

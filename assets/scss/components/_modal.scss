@@ -1,0 +1,22 @@
+@use '../mixins/menu';
+@use '../mixins/flex';
+
+.shadow {
+  transition: var(--transitionAll);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: var(--transparentColor);
+}
+
+.close-icon {
+  position: absolute;
+  @include menu.menu-onclick;
+  top: 0;
+  right: 0;
+}
+
+

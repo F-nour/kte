@@ -1,0 +1,7 @@
+@mixin contentButton {
+  @media (max-width: 1024px) {
+    font-size: small;
+    min-width: initial;
+    max-width: initial;
+  }
+}

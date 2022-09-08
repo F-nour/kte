@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur le site de Kiff ton écharpe{% endblock %}
+
+{% block main %}
+{{ component('title', {
+    classname: 'home',
+    id: 'homeTitle',
+    content: block('title')
+}) }}
+{% endblock %}

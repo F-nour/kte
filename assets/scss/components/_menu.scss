@@ -1,0 +1,48 @@
+@use '../mixins/menu';
+@use '../mixins/accessibility';
+@use '../mixins/responsive';
+
+
+.actual {
+  background-color: var(--actualColor);
+  @include accessibility.disabledBoxShadow();
+
+  &:focus,
+  &:hover {
+    background-color: var(--actualFocusColor);
+    transition: var(--transitionAll);
+    @media (max-width: 1024px) {
+      background-color: var(--actualColor);
+
+    }
+  }
+}
+
+.btn-navbar,
+.btn-navbar:before,
+.btn-navbar:after {
+  @include responsive.contentButton();
+}
+
+.btn-navbar.btn-collapse:focus {
+  background: var(--actualColor);
+}
+
+@media (max-width: 1024px) {
+  .hamberger-menu {
+    position: fixed;
+    top: 0;
+    width: var(--sizeAll);
+    @include menu.menu-onclick();
+    background-color: var(--bgColor);
+    z-index: 50;
+
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

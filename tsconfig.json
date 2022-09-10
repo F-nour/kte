@@ -21,6 +21,7 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
+    "typeRoots": ["./node_modules/@types", "./assets/types/"]
   },
   "exclude": [
     "node_modules",
@@ -29,6 +30,9 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
+    "assets/setupTests.ts"
+  ],
+  "include": [
+    "assets/types/custom.d.ts"
   ]
 }

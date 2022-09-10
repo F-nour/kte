@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import logo from '../../logo.svg'
-import '../../App.css'
+import logo from '../../logo.svg';
+import '../App.css'
+import assetsPath from "../main";
 
+const assetPath = assetsPath()
 function App() {
   const [count, setCount] = useState(1)
 
   const onClick = async () => {
-    const {demo} = await import('../../demo.js')
+    const {demo} = await import(`${assetPath}types/demo`)
     demo()
   }
 

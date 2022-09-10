@@ -61,6 +61,15 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "stof/doctrine-extensions-bundle": {
+        "version": "1.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.2",
+            "ref": "e805aba9eff5372e2d149a9ff56566769e22819d"
+        }
+    },
     "symfony/console": {
         "version": "6.1",
         "recipe": {
@@ -300,7 +309,7 @@
             "ref": "2e458cc7e6f1df1dad890eb104b81e4f302c9bd4"
         },
         "files": [
-            "assets/app.js",
+            "assets/app.ts",
             "assets/bootstrap.js",
             "assets/controllers.json",
             "assets/controllers/hello_controller.js",

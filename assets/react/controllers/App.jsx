@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import logo from '../../logo.svg'
+import '../../App.css'
 
 function App() {
   const [count, setCount] = useState(1)
 
   const onClick = async () => {
-    const {demo} = await import('./demo.js')
+    const {demo} = await import('../../demo.js')
     demo()
   }
 
@@ -31,15 +31,6 @@ function App() {
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
           </a>
         </p>
       </div>

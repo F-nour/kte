@@ -1,6 +1,6 @@
 /* fix responsive bugs */
 
-*:not(head, meta, title, link, script, style,
+*:not(html, head, meta, title, link, script, style,
 table, tbody, tfoot, thead, tr, td, th,
 label, input, textarea, select, option,
 p, br, hr, blockquote, q, code, span, strong, em,
@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  margin: 0;
   flex: 1 0;
   -webkit-user-drag: none;
   text-rendering: optimizeLegibility;

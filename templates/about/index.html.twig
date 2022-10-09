@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Mieux me connaître {% endblock %}
+
+{% block body %}
+{{ component('title', {
+    classname: 'home',
+    id: 'homeTitle',
+    content: 'Mieux connaître Kiff Ton Écharpe'
+}) }}www
+{% endblock %}

@@ -1,39 +1,43 @@
 @use '../mixins/collapse';
+@use '../mixins/form';
 
-.btn-success:before {
+.icon {
+  @include form.icons();
+}
+
+.btn-icon-check:before {
   content: "check";
 }
 
-.btn-cancel:before {
+.btn-icon-cancel:before {
   content: "cancel";
 }
 
-.btn-reset:before {
+.btn-icon-reset:before {
   content: "restart_alt";
 }
 
-.btn-add:after {
+.btn-icon-add:after {
   content: "add"; /* '\e145' */
 }
 
-.btn-delete:after {
+.btn-icon-delete:after {
   content: "delete"; /* '\e872' */
 }
 
-.btn-update:after {
+.btn-icon-update:after {
   content: "edit"; /* '\e3c9' */
 }
 
-.btn-login:after {
+.btn-icon-login:after {
   content: "lock_open"; /* '\e897' */
 }
 
-.btn-logout:after {
+.btn-icon-logout:after {
   content: "lock"; /* '\e898' */
 }
 
-.btn-close {
-  height: var(--sizeMenu);
+.btn-icon-close {
   &:after {
     content: "close"; /* '\e5cd' */
     justify-content: end;
@@ -42,61 +46,61 @@
   }
 }
 
-.btn-menu:before {
+.btn-icon-menu:before {
   content: "menu"; /* '\e5d2' */
   font-size: var(--sizeMenu);
   height: var(--sizeMenu);
   justify-content: start;
 }
 
-.btn-name:before {
-  content: "face"; /* '\e7fd' */
+.btn-icon-back:before {
+  content: "arrow_back"; /* '\e5c4' */
 }
 
-.btn-email:before {
-  content: "email"; /* '\e0be' */
-}
-
-.btn-address:before {
-  content: "place"; /* '\e0bf' */
-}
-
-.btn-city:before {
-  content: "location_city"; /* '\e0c0' */
-}
-
-.btn-phone:before {
-  content: "phone"; /* '\e0cd' */
-}
-
-.btn-password:before {
-  content: "key"; /* '\e897' */
-}
-
-.btn-society:before {
-  content: "corporate_fare"; /* '\e0c0' */
-}
-
-.btn-service:before {
-  content: "group"; /* '\e0c0' */
-}
-
-.btn-title:before {
-  content: 'title'; /* '\e0c0' */
-}
-
-.btn-description:before {
-  content: 'description'; /* '\e0c0' */
-}
-
-.btn-back:before {
-    content: "arrow_back"; /* '\e5c4' */
-}
-
-.btn-collapse {
+.btn-icon-collapse {
   @include collapse.toggle();
 }
 
-.btn-file:before {
+.btn-icon-file:before {
   content: 'file_upload';
+}
+
+.icon-name:before {
+  content: "face"; /* '\e7fd' */
+}
+
+.icon-email {
+  content: "email"; /* '\e0be' */
+}
+
+.icon-address:before {
+  content: "place"; /* '\e0bf' */
+}
+
+.icon-city:before {
+  content: "location_city"; /* '\e0c0' */
+}
+
+.icon-phone:before {
+  content: "phone"; /* '\e0cd' */
+}
+
+.icon-password:before {
+  content: "key"; /* '\e897' */
+}
+
+.icon-society:before {
+  content: "corporate_fare"; /* '\e0c0' */
+}
+
+.icon-service:before {
+  content: "group"; /* '\e0c0' */
+}
+
+.icon-title:before {
+  content: 'title'; /* '\e0c0' */
+}
+
+.icon-description:before {
+  content: 'description'; /* '\e0c0' */
 }

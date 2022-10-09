@@ -1,7 +1,6 @@
 @use '../mixins/flex';
 @use '../mixins/form';
 
-
 .form {
   padding: 6px 12px;
   margin: auto;
@@ -29,9 +28,7 @@
 }
 
 .form-control {
-  width: 100%;
   border-bottom: 1px solid var(--textColor);
-  border-radius: 4px;
   padding: 0.6rem 0 0.6rem 2em;
   line-height: 1.42857143;
   color: var(--textColor);
@@ -60,4 +57,13 @@ input::placeholder {
     top: 1.8rem;
     padding-left: 0.5rem;
   }
+}
+
+.form-check {
+  @include flex.flex-row(0, 8, start, nowrap);
+}
+
+.required:after {
+  content: ' * ';
+  font-weight: bold;
 }

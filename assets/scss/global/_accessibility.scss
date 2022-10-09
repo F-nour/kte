@@ -19,8 +19,7 @@ button,
 input,
 optgroup,
 select,
-textarea,
-*[tabindex] {
+textarea {
   @include accessibility.focus();
   @include accessibility.hover();
   @include accessibility.active();

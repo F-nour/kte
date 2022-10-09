@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Mes produits{% endblock %}
+
+{% block main %}
+{{ component('title', {
+    classname: 'product',
+    id: 'productTitle',
+    content: 'Les produits de Kiff ton écharpe'
+}) }}{% endblock %}

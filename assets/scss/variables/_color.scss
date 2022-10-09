@@ -13,13 +13,13 @@
   --actualFocusColor: rgba(150, 144, 213, 0.3);
   --successBg: rgba(0, 200, 0, 0.2);
   --alertSuccess: rgba(100, 255, 100, 0.1);
-  --successColor: rgb(0, 200, 0);
+  --successColor: var(--successText);
   --successText: rgb(0, 50, 0);
   --warningBg: rgba(255, 150, 0, 0.2);
-  --warningColor: rgb(255, 150, 0);
+  --warningColor: rgb(100, 36, 0);
   --errorBg: rgba(255, 0, 0, 0.2);
   --alertError: rgba(255, 100, 100, 0.1);
-  --errorColor: rgb(200, 0, 0);
+  --errorColor: rgb(100, 0, 0);
   --infoColor: rgb(100, 0, 0);
   --updateBg: rgba(0, 140, 255, 0.1);
   --updateColor: rgb(0, 140, 255);

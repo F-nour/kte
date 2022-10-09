@@ -1,3 +1,6 @@
+// framworks
+@use '~bootstrap/scss/bootstrap';
+
 // variables css
 @use 'scss/variables/boxShadow';
 @use 'scss/variables/color';
@@ -9,9 +12,6 @@
 
 // reseters for the site
 @use "scss/reseters/common";
-
-// framworks
-@use 'scss/global/bootstrap';
 
 // global
 @use 'scss/global/custom';

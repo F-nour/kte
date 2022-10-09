@@ -7,17 +7,17 @@
             </a>
         </li>
         <li data-menus class="header-menu__link internal list1">
-            <a href="#{# path('/products') #}" title="Produits" class="flex-row">
+            <a href="{{ path('product') }}" title="Produits" class="flex-row">
                 Mes services
             </a>
         </li>
         <li data-menus class="header-menu__link internal list2">
-            <a href="#{# path('/about') #}" title="A propos" class="flex-row">
+            <a href="{{ path('about') }}" title="A propos" class="flex-row">
                 Mieux me connaître
             </a>
         </li>
         <li data-menus class="header-menu__link internal list3">
-            <a href="#{# path('/contact') #}" title="Contact" class="flex-row">
+            <a href="{{ path('contact') }}" title="Contact" class="flex-row">
                 Me contacter
             </a>
         </li>
@@ -26,36 +26,36 @@
             <?= form()->button('btn-no-style btn-navbar btn-collapse', 'user-area', 'collapse', null, 'Mon compte') ?>
             <ul class="user-menu collapse" id="userMenu">
                 <li data-menus class="header-menu__link internal list4a">
-                    <a href="#{# path('/account') " title="Mon compte" class="flex-row">Espace personnel</a>
+                    <a href="{{ path('/account') " title="Mon compte" class="flex-row">Espace personnel</a>
                 </li>
                 <?php
               if (auth()->isAdmin()) : ?>
                 <li data-menus class="header-menu__link internal list4b">
-                    <a href="#{# path('/admin') " title="Administration" class="flex-row">Espace administrateur</a>
+                    <a href="{{ path('/admin') " title="Administration" class="flex-row">Espace administrateur</a>
                 </li>
                 <li data-menus class="header-menu__link internal list4c">
-                    <a href="#{# path('/admin/posts') " title="Gérer les actus" class="flex-row">Gérer les actus</a>
+                    <a href="{{ path('/admin/posts') " title="Gérer les actus" class="flex-row">Gérer les actus</a>
                 </li>
                 <li data-menus class="header-menu__link internal list4d">
-                    <a href="#{# path('/admin/products') " title="Gérer les produits" class="flex-row">Gérer les produits</a>
+                    <a href="{{ path('/admin/products') " title="Gérer les produits" class="flex-row">Gérer les produits</a>
                 </li>
                 <li data-menus class="header-menu__link internal list4e">
-                    <a href="#{# path('/admin/users') " title="Gérer les utilisateurs" class="flex-row">Gérer les utilisateurs</a>
+                    <a href="{{ path('/admin/users') " title="Gérer les utilisateurs" class="flex-row">Gérer les utilisateurs</a>
                 </li>
                 <li data-menus class="header-menu__link internal list4f">
-                    <a href="#{# path('/admin/contacts') " title="Demandes de contact" class="flex-row">Demandes de contact</a>
+                    <a href="{{ path('/admin/contacts') " title="Demandes de contact" class="flex-row">Demandes de contact</a>
                 </li>
                 <?php
               endif; ?>
                 <li data-menus class="header-menu__link internal list4g">
-                    <a href="#{# path('/logout') "
+                    <a href="{{ path('/logout') "
                             title="Déconnexion"
                             class="btn btn-no-style btn-navbar btn-logout flex-row">Déconnexion</a>
                 </li>
             </ul> #}
         </li>
         <li data-menus class="header-menu__link internal list4">
-            <a href="#{# path('/login') #}" class="btn btn-no-style btn-navbar btn-login flex-row">Connexion</a>
+            <a href="{{ path('login') }}" class="btn btn-no-style btn-navbar btn-login flex-row">Connexion</a>
         </li>
     </ul>
 </nav>

@@ -1,21 +1,32 @@
-{% extends '../../base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
-{% block body %}
+{% block main %}
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
     <h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+    {{ form_start(userForm) }}
+    <div class="form-group">
+        {{ form_row(userForm.email, {
+            label: 'Votre adresse email'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_row(userForm.plainPassword, {
+            label: 'Votre mot de passe'
+        }) }}
+    </div>
+        <div {{ react_component('modals/CguModal') }}></div>
+        {{ form_row(userForm.agreeTerms, {
+            label: "J'accepte les conditions générales d'utilisation"
+        }) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+        <div class="form-group group-end">
+            <div {{ react_component('buttons/AllForms', {
+                submit: "S'enregistrer",
+                cancel: "Annuler"}) }}></div>
+        </div>
+    {{ form_end(userForm) }}
 {% endblock %}

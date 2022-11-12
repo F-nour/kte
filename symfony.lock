@@ -257,9 +257,6 @@
             "templates/base.html.twig"
         ]
     },
-    "symfony/ux-react": {
-        "version": "v2.4.0"
-    },
     "symfony/ux-twig-component": {
         "version": "v2.4.0"
     },

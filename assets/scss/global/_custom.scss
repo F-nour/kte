@@ -1,6 +1,11 @@
 @use '../mixins/flex';
 @use '../mixins/form';
 
+// framworks
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--linkColor) var(--scrollColor);
